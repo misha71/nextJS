@@ -31,7 +31,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const client = new Client({email, password: hashPassword})
         await client.save()
         //res.status(201).json({message: 'Пользователь создан', type: 'success'})
-        res.status(201).send({message: 'Пользователь создан', type: 'success'})
+        //res.status(201).send({message: 'Пользователь создан', type: 'success'})
+        setTimeout(() => {
+            res.status(201).json({message: 'Пользователь создан', type: 'success'})
+        }, 2000)
 
     }
     catch (e){
