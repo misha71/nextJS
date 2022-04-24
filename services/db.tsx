@@ -11,5 +11,7 @@ async function dbConnection() {
         useNewUrlParser: true,
     } as  mongoose.MongooseOptions);
     connection.isConnected = db.connections[0].readyState;
+    console.log('test')
+    console.log(connection.isConnected)
 }
 export default dbConnection;
