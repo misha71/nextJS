@@ -15,7 +15,7 @@ import {
 import axios from 'axios'
 const storageName = 'userData'
 const {publicRuntimeConfig = {}} = getConfig() || {}
-const {API_URL} = publicRuntimeConfig
+const {API_URL = ''} = publicRuntimeConfig
 function getToken(){
     const data = JSON.parse(localStorage.getItem(storageName) || '{}')
     if(data && data.token){
