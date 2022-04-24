@@ -30,12 +30,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const hashPassword = await bcrypt.hash(password, 12)
         const client = new Client({email, password: hashPassword})
         await client.save()
-        //res.status(201).json({message: 'Пользователь создан', type: 'success'})
+        res.status(201).json({message: 'Пользователь создан', type: 'success'})
         //res.status(201).send({message: 'Пользователь создан', type: 'success'})
-        setTimeout(() => {
-            res.status(201).send({message: 'Пользователь создан', type: 'success'})
-        }, 8000)
-
+        
     }
     catch (e){
         res.status(500).json({message: 'Произошла ошибка на сервере'})
