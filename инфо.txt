@@ -1,0 +1,27 @@
+npm install --save redux react-redux next-redux-wrapper redux-thunk redux-devtools-extension  axios mongoose bcryptjs jsonwebtoken js-cookie typescript @types/react @types/node
+npm install -D tailwindcss postcss autoprefixer
+npm install express-validator
+
+для управление состоянием
+react-redux next-redux-wrapper redux-thunk redux-devtools-extension 
+
+для выполнения асинхронных запросов
+axios
+
+mongoose
+Для работы с базой данных
+
+Для шифрования пароля 
+bcryptjs
+
+jsonwebtoken
+для создания на стороне клиента временного токена для посещения сайта 
+
+Для работы typescript
+typescript @types/react @types/node
+
+Для работы со стилями
+tailwindcss 
+
+валидация данных на сервере 
+https://dev.to/meddlesome/nextjs-apis-validator-with-middleware-3njl
