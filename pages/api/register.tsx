@@ -7,7 +7,7 @@ import validateMiddleware from '../../lib/validate-middleware'
 import { check, validationResult } from 'express-validator'
 const validateBody = initMiddleware(
     validateMiddleware([
-        check('email', 'Некорреткный email').isEmail(),
+        check('email', 'Некорреткный email адрес').isEmail(),
         check('password', "Минимальная длина: 6 символов").isLength({min: 6})
     ], validationResult)
 )
@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         await client.save()
         res.status(201).json({message: 'Пользователь создан', type: 'success'})
         //res.status(201).send({message: 'Пользователь создан', type: 'success'})
-        
+
     }
     catch (e){
         res.status(500).json({message: 'Произошла ошибка на сервере'})
